@@ -1,3 +1,26 @@
 *, *::before, *::after {
     font-family: 'Open Sans', sans-serif;
 }
+
+body {
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: blue;
+
+}
+
+.logo::before {
+
+}
+
+.logo::after {
+
+}
