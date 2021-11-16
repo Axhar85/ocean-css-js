@@ -9,5 +9,11 @@ const curencyFormatter = new Intl.NumberFormat("en-us", {
 })
 
 
-const amountraised = 102344
-moneyElem.innerText = curencyFormatter.format(amountraised)
+setupTrash()
+
+async function setupTrash() {
+  const amountRaised = await fetch("https://tscache.com/donation_total.json")
+    .then(res => res.json())
+    .then(data => data.count)
+  moneyElem.innerText = currencyFormatter.format(amountRaised)
+}
