@@ -8,6 +8,14 @@ const curencyFormatter = new Intl.NumberFormat("en-us", {
     maximumFractionDigits: 0
 })
 
+const trashFormatter = new Intl.NumberFormat("en-us", {
+    minimumIntegerDigits: 8,
+    maximumFractionDigits: 0,
+    useGrouping: false
+})
+
+const MAX_MONEY_RAISED = 30000000
+
 
 setupTrash()
 
@@ -16,4 +24,8 @@ async function setupTrash() {
     .then(res => res.json())
     .then(data => data.count)
   moneyElem.innerText = currencyFormatter.format(amountRaised)
+
+  const amountLeftToRaise = Math.max(MAX_MONEY_RAISED - amountRaised, 0)
+  console.log(trashFormatter.format(amountLeftToRaise))
 }
+
