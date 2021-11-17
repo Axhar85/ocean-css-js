@@ -43,7 +43,7 @@ async function setupTrash() {
      md: {
         amount: parseInt(stringifiedAmount[3]),
         icon: "phone",
-    },
+      },
      sm: {
         amount: parseInt(stringifiedAmount[4]),
         icon: "toy-car",
@@ -52,7 +52,17 @@ async function setupTrash() {
         amount: parseInt(stringifiedAmount[5]),
         icon: "bottle",
       },
-}
+    }
+  Object.values(trashAmount).forEach(({amount. icon}) => {
+      for (let i = 0; i < amount; i++) {
+          createTrash(icon)
+      }
+  })
   
+}
+function createTrash(icon) {
+    const img = document.createElement("img")
+    img.src = '/imgs/${icon).svg'
+    trashContainer.appendChild(img)
 }
 
