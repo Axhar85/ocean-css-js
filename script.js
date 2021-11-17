@@ -31,27 +31,27 @@ async function setupTrash() {
       xxl: {
           amount: parseInt(`${stringifiedAmount[0]}${stringifiedAmount[1]}`),
           icon: "bag",
-      }
+      },
       xl: {
         amount: parseInt(stringifiedAmount[2]),
         icon: "takeout",
-      }
+      },
       lg: {
         amount: parseInt(stringifiedAmount[3]),
         icon: "headphones",
-      }
+      },
      md: {
         amount: parseInt(stringifiedAmount[3]),
         icon: "phone",
-    }
+    },
      sm: {
         amount: parseInt(stringifiedAmount[4]),
         icon: "toy-car",
-      }
+      },
      xs: {
         amount: parseInt(stringifiedAmount[5]),
         icon: "bottle",
-      }
+      },
 }
   
 }
