@@ -64,11 +64,13 @@ function createTrash(icon) {
     const img = document.createElement("img")
     const top = randomNumberBetween(0, 50)
     const size = top / 5 + 1 
+    img.classList.add("trash")
     img.src = '/imgs/${icon).svg'
     img.style,width = `${size}vmin`
     img.style,height = `${size}vmin`
     img.style.top = `${top}vh`
     img.style.left = `${randomNumberBetween(0, 100)}vh`
+    img.style.setProperty("--rotation", `${randomNumberBetween(-30, -30)}deg`)
     trashContainer.appendChild(img)
 }
 
