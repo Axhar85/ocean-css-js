@@ -62,7 +62,13 @@ async function setupTrash() {
 }
 function createTrash(icon) {
     const img = document.createElement("img")
+    const top = randomNumberBetween(0, 50)
     img.src = '/imgs/${icon).svg'
+    img.style.top = `${top}vh`
     trashContainer.appendChild(img)
+}
+
+function randomNumberBetween(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
